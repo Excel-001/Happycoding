@@ -17,9 +17,14 @@ import booknowimg from './assets/booknow.svg';
 import { NavLink } from "react-router-dom";
 import React from 'react';
 import './App.scss';
+import { useInView } from "react-intersection-observer";
+import { motion, AnimatePresence } from 'framer-motion';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
  function Home(){
+
+  const [ref, inView] = useInView({ threshold: 0.5 });
+
     return(
       <>
       <div className="bg-milk mb-5 ">
@@ -27,39 +32,135 @@ import "bootstrap/dist/js/bootstrap.min.js";
 <div className="col-lg-6 col-12">
   <img src={waterlines} className=" position-absolute  left-25 d-none d-lg-block" alt="" />
 <p className="text-navyblue">Proven strategies backed by science for success.</p>
-<h1 className="text-navyblue fw-bolder  display-2">Live life at the full potential</h1>
+<motion.h1 
+  initial= {
+  {
+     x: -300 
+  }
+  
+  }
+  whileInView = {
+    {
+       x:0,
+
+    transition: {
+      type: "tween",
+      duration: .8
+    }
+   
+    }
+  }
+className="text-navyblue fw-bolder  display-2">Live life at the full potential</motion.h1>
 <p className="text-navyblue">I help people to discover their true potential and live a fulfilling life...
 Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?</p>
-<button type="button"  class="btn bg-lightgreen rounded text-white ">Book a session with us</button>
+<motion.button
+initial= {{
+   y: 250
+}
+   
+  }
+   whileInView= {{
+      y: 0,
+
+    transition: {
+    
+      duration: 1,
+ 
+  }
+  
+    }
+  }
+type="button"  class="btn bg-lightgreen rounded text-white  ">Book a session with us</motion.button>
                    
 </div>
 <picture className="col-lg-6 col-12 m-auot position-relative">
-    <img src={bigimg} className=" position-relative bottom-10 col-12  " alt="" />
+    <motion.img 
+    initial= {{
+      x: 300
+   }
+      
+     }
+      whileInView= {{
+         x: 0,
+   
+       transition: {
+         type: "spring",
+         bounce: 0.4,
+         duration: 2,
+         delay:0
+     }
+     
+       }
+     }
+    src={bigimg} className=" position-relative bottom-10 col-12  " alt="" />
 </picture>
 
 
    </section>
+  
       </div>
-
-      <section className=" col-12  tetx-navyblue  d-flex flex-column flex-lg-row justify-content-start col-gap-2  gap-md-5 p-4">
+   
+      <section className=" col-12 tetx-navyblue  d-flex flex-column flex-lg-row justify-content-start col-gap-2  gap-md-5 px-4 sp">
       <div className="col-md-9  col-lg-5 col-12  ">
 <img src={waterlines} alt="" />
-<h2 className="text-navyblue fs-1  fw-bolder">
+<motion.h2 
+ initial= {
+  {
+     x: -300 
+  }
+  
+  }
+  whileInView = {
+    {
+       x:0,
+
+    transition: {
+      type: "tween",
+      duration: .8
+    }
+   
+    }
+  }
+className="text-navyblue fs-1  fw-bolder">
 I can help you in these particular areas.
-</h2>
+</motion.h2>
 
       </div>
-      <div className="text-navyblue col-md-9 col-lg-4 col-12">
+      <motion.div 
+ initial= {
+  {
+     x: 300 
+  }
+  
+  }
+  whileInView = {
+    {
+       x:0,
+
+    transition: {
+      type: "tween",
+      duration: .8
+    }
+   
+    }
+  }
+      className="text-navyblue col-md-9 col-lg-4 col-12">
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
 </p>
 <p>
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 </p>
-      </div>
+      </motion.div>
       </section>
- <section className="px-4 py-5 text-navyblue flex-wrap d-flex justify-content-lg-between">
-  <div className=" col-12 m-auto  col-md-3 text-start  ">
+ <section className="  px-4 py-5 text-navyblue  flex-wrap d-flex justify-content-lg-between">
+  <motion.div
+
+    ref={ref} 
+    initial={{  y: 300 }}
+ whileInView={{y:0}}
+    transition={{ duration: .6 }}
+   className=" col-12 m-auto  col-md-3 text-start  ">
     
     <div>
       <img src={coaching} alt="" />
@@ -68,8 +169,13 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
     </p>
-  </div>
-  <div className=" col-12 m-auto col-md-3 text-start  ">
+  </motion.div>
+  <motion.div 
+      ref={ref} 
+      initial={{  y: 300 , opacity:0}}
+     whileInView={{y:0, opacity:1}}
+      transition={{ duration: .8, }}
+  className=" col-12 m-auto col-md-3 text-start  ">
     
     <div>
       <img src={frame2} alt="" />
@@ -78,8 +184,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
     </p>
-  </div>
-  <div className=" col-12 m-auto col-md-3 text-start  ">
+  </motion.div>
+  <motion.div 
+       ref={ref} 
+       initial={{  y: 300 , opacity:0}}
+      whileInView={{y:0, opacity:1}}
+       transition={{ duration: 1, }}className=" col-12 m-auto col-md-3 text-start  ">
     
     <div>
       <img src={gcs} alt="" />
@@ -88,13 +198,31 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
     <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
     </p>
-  </div>
+  </motion.div>
  </section>
  <div className="bg-milk p-4">
   
-    <h2 className="text-navyblue fw-bold   col-sm-7 col-md-5 col-lg-4">
+    <motion.h2 
+    initial= {
+      {
+         y: -50 
+      }
+      
+      }
+      whileInView = {
+        {
+           y:0,
+    
+        transition: {
+          type: "tween",
+          duration: 1.5
+        }
+       
+        }
+      }
+    className="text-navyblue fw-bold   col-sm-7 col-md-5 col-lg-4">
   Hear out what my clients say about me.
-  </h2>
+  </motion.h2>
 
   <div className="text-navyblue py-md-5 gap-3 col-12 d-flex flex-column flex-md-row justify-content-between m-auto">
     <div className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded">

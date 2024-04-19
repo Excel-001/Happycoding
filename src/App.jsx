@@ -50,7 +50,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 7000);
+    }, 5000);
   }, []);
 
   const [count, setCount] = useState(1);
