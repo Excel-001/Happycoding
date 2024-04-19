@@ -16,6 +16,7 @@ import Extra from './extra';
 import Home from './home';
 import Free from './free';
 import Project from './project'
+import { motion} from 'framer-motion';
 
 function App() {
   const [isToggled, setIsToggled] = useState(false);
@@ -125,9 +126,12 @@ function App() {
                     ))}
                     <li className="nav-item">
                       <NavLink to="/free" className="text-grey text-decoration-none  ">
-                        <button type="button" className="btn bg-lightgreen rounded text-white ">
+                        <motion.button
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                         type="button" className="btn bg-lightgreen rounded text-white ">
                           Book a session with us
-                        </button>
+                        </motion.button>
                       </NavLink>
                     </li>
                   </ul>

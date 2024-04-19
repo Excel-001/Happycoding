@@ -54,6 +54,8 @@ className="text-navyblue fw-bolder  display-2">Live life at the full potential</
 <p className="text-navyblue">I help people to discover their true potential and live a fulfilling life...
 Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?</p>
 <motion.button
+    whileHover={{ scale: 1.1 }}
+    transition={{ type: "spring", stiffness: 400, damping: 10 }}
 initial= {{
    y: 250
 }
@@ -68,8 +70,7 @@ initial= {{
  
   }
   
-    }
-  }
+    }}
 type="button"  class="btn bg-lightgreen rounded text-white  ">Book a session with us</motion.button>
                    
 </div>
@@ -225,7 +226,11 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
   </motion.h2>
 
   <div className="text-navyblue py-md-5 gap-3 col-12 d-flex flex-column flex-md-row justify-content-between m-auto">
-    <div className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded">
+    <motion.div 
+    initial={{  y: 300 , opacity:0}}
+    whileInView={{y:0, opacity:1}}
+     transition={{ duration: .8, }}
+    className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded">
       <p>"I gained so much <b>confidence</b>  in my ability to connect and deepen my relationships with people. "</p>
       <p>
         <b>Jane</b>
@@ -238,8 +243,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
         <img src={yellowstar} alt="" />
         <img src={yellowstar} alt="" />
       </div>
-    </div>
-    <div className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded">
+    </motion.div>
+    <motion.div 
+    initial={{  y: 300 , opacity:0}}
+    whileInView={{y:0, opacity:1}}
+     transition={{ duration: .8, delay:.5 }}
+    className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded">
       <p>
       "I gained so much confidence in my ability to connect and deepen my relationships with people. "
     </p>
@@ -255,8 +264,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
         <img src={star} alt="" />
         
       </div>
-    </div>
-    <div className="bg-white col-lg-3 col-md-4 col-12 p-3 m-auto m-md-0 rounded">
+    </motion.div>
+    <motion.div 
+       initial={{  y: 300 , opacity:0}}
+       whileInView={{y:0, opacity:1}}
+        transition={{ duration: .8, delay:.8 }}
+    className="bg-white col-lg-3 col-md-4 col-12 p-3 m-auto m-md-0 rounded">
       <p>
       "I gained so much confidence in my ability to connect and deepen my relationships with people. "
   </p>
@@ -272,19 +285,25 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
         <img src={star} alt="" />
         
       </div>
-    </div>
+    </motion.div>
   </div>
-  <div>
-    
-  </div>
+
  </div>
  <section className="text-navyblue p-4">
-  <h2 className=" fs-1  fw-bolder col-md-5 m-auto text-center">
+  <motion.h2 
+     initial={{  y: -50 , opacity:0}}
+     whileInView={{y:0, opacity:1}}
+      transition={{ duration: .8,}}
+  className=" fs-1  fw-bolder col-md-5 m-auto text-center">
   Stay Motivated, read the weekly blog articles.
-  </h2> 
+  </motion.h2> 
   
   <div className="d-flex justify-content-between gap-3 my-4  flex-column flex-md-row">
-    <div className="col-9 col-md-3 m-auto ">
+    <motion.div 
+     initial={{  y: 500 , opacity:0}}
+     whileInView={{y:0, opacity:1}}
+      transition={{ duration: 1,}}
+    className="col-9 col-md-3 m-auto ">
       <img src={imgeone} className="w-100" alt="" />
       <p className="my-3 fs-5"><b> Balancing your love and work life.  </b></p>
       <p className="m-0">
@@ -292,8 +311,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
       </p>
 
-    </div>
-    <div className="col-9 col-md-3 m-auto">
+    </motion.div>
+    <motion.div 
+      initial={{  y: 500 , opacity:0}}
+      whileInView={{y:0, opacity:1}}
+       transition={{ duration: 1, delay:.5}}
+    className="col-9 col-md-3 m-auto">
       <img src={bh} className="w-100" alt="" />
       <p className="my-3 fs-5"><b>A short break from Social Media is important. </b></p>
       <p className="m-0">
@@ -301,8 +324,12 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
       </p>
 
-    </div>
-    <div className="col-9 col-md-3 m-auto">
+    </motion.div>
+    <motion.div 
+       initial={{  y: 500 , opacity:0}}
+       whileInView={{y:0, opacity:1}}
+        transition={{ duration: 1, delay:.8}}
+    className="col-9 col-md-3 m-auto">
       <img src={cameragirl} className="w-100" alt="" />
       <p className="my-3 fs-5"><b>How to be 1% Better Every Day</b></p>
       <p className="m-0">
@@ -310,10 +337,13 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
 
       </p>
 
-    </div>
+    </motion.div>
   </div>
  <div className="d-flex ">
-      <button type="button"  class="btn col-6 col-md-3 bg-lightgreen rounded text-white m-auto ">Read more blogs</button>
+      <motion.button 
+       whileHover={{ scale: 1.1 }}
+       transition={{ type: "spring", stiffness: 400, damping: 10 }}
+      type="button"  class="btn col-6 col-md-3 bg-lightgreen rounded text-white m-auto ">Read more blogs</motion.button>
  
   </div>
 
@@ -330,7 +360,16 @@ Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolor
     <p className="col-lg-8">
     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
     </p>
-    <button type="button"  class="btn bg-lightgreen rounded text-white ">Book a session with us</button>
+    <motion.button
+    initial= {{
+      y: 250
+   }
+      
+     }
+      whileInView= {{y: 0, transition: {duration: 1,}}}
+     whileHover={{ scale: 1.1 }}
+     transition={{ type: "spring", stiffness: 400, damping: 10 }}
+     type="button"  class="btn bg-lightgreen rounded text-white ">Book a session with us</motion.button>
                  
   </div>
   <div className="col-md-5">

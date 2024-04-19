@@ -12,6 +12,7 @@ import four from './assets/four.svg'
 import calender from './assets/calender.svg';
 import alarm from  './assets/alarm.svg';
 import flower from './assets/flower.svg'
+import { motion} from 'framer-motion';
 import  aboutimg from './assets/aboutbigimg.svg';
 
 function About() {
@@ -23,7 +24,7 @@ return(
          <h1 className="fw-bolder display-2">About me</h1> 
          <p>I help people to discover their true potential and live a fulfilling life...
 Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?</p>
-<button type="button"  class="btn bg-lightgreen rounded text-white ">Book a session with us</button>
+<motion.button type="motion.button"  class="btn bg-lightgreen rounded text-white ">Book a session with us</motion.button>
                    
     </div>
     <div className="col-lg-5">
@@ -139,9 +140,9 @@ Discover the simple 3 steps that I discovered to hack productivity. It just work
     <div class="accordion text-navyblue  container" id="accordionPanelsStayOpenExample">
 <div class="accordion-item accordion-flush border-0">
 <h2 class="accordion-header shadow-0  border-top" id="panelsStayOpen-headingOne">
-<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+<motion.button class="accordion-motion.button" type="motion.button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
 <b className="text-navyblue">How long does the coaching process take? </b>
-</button>
+</motion.button>
 </h2>
 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
 <div class="accordion-body text-navyblue">
@@ -151,9 +152,9 @@ Yes, you can try us for free for 30 days. If you want, we’ll provide you with 
 </div>
 <div class="accordion-item accordion-flush border-0">
 <h2 class="accordion-header shadow-0  border-top" id="panelsStayOpen-headingTwo">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+<motion.button class="accordion-motion.button collapsed" type="motion.button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
 <b className="text-navyblue">What if I wanted to end my coaching engagement? </b>
-</button>
+</motion.button>
 </h2>
 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
 <div class="accordion-body">
@@ -163,9 +164,9 @@ Yes, you can try us for free for 30 days. If you want, we’ll provide you with 
 </div>
 <div class="accordion-item accordion-flush border-0">
 <h2 class="accordion-header shadow-0  border-top" id="panelsStayOpen-headingThree">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+<motion.button class="accordion-motion.button collapsed" type="motion.button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
 <b className="text-navyblue">Can I change through coaching? </b>
-</button>
+</motion.button>
 </h2>
 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
 <div class="accordion-body">
@@ -175,9 +176,9 @@ Yes, you can try us for free for 30 days. If you want, we’ll provide you with 
 </div>
 <div class="accordion-item accordion-flush border-0">
 <h2 class="accordion-header shadow-0  border-top" id="panelsStayOpen-headingFour">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+<motion.button class="accordion-motion.button collapsed" type="motion.button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
 <b className="text-navyblue">How often do we meet? </b>
-</button>
+</motion.button>
 </h2>
 <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
 <div class="accordion-body">
@@ -194,7 +195,7 @@ Yes, you can try us for free for 30 days. If you want, we’ll provide you with 
 <h4 className="text-center">Still have questions?</h4>
 <p className="text-center">Can’t find the answer you’re looking for? Please chat to our friendly team.</p>
 <div>
-<button type="button"  class="btn bg-lightgreen rounded text-white m-auto ">Get in touch</button>
+<motion.button type="motion.button"  class="btn bg-lightgreen rounded text-white m-auto ">Get in touch</motion.button>
 </div>
 
             

@@ -49,11 +49,11 @@ right: 10vw;
 .end-10{
 left: 10vw;
 }
-.accordion-button:not(.collapsed){
+.accordion-motion.button:not(.collapsed){
 background-color: transparent !important;
 color: inherit;
 }
-button.accordion-button:focus{
+motion.button.accordion-motion.button:focus{
 box-shadow: inherit;
 
 }

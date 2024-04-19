@@ -9,6 +9,7 @@ import smalltwo from './assets/smalltwo.svg';
 import smallthree from './assets/smallthree.svg';
 import smallfour from './assets/smallfour.svg'
 import { useState } from 'react';
+import { motion} from 'framer-motion';
 import './App.scss';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -38,7 +39,7 @@ function Free() {
         <input type="email" name="email" id='email' value={email} placeholder='Enter your email' onChange={handleEmail}   />  
         </div>
         <p>    We care about your data in our <a href="">privacy policy</a></p>    
-        <button type="submit" onClick={handleClick} class="btn bg-lightgreen rounded text-white col-lg-4 col-5 ">Get free guide</button>             
+        <motion.button type="submit" onClick={handleClick} class="btn bg-lightgreen rounded text-white col-lg-4 col-5 ">Get free guide</motion.button>             
         </div>
         <div className=" col-lg-6 col-12 bg-milk d-flex justify-content-center align-items-center p-4 ">
             <img src={bimg} alt="" />
@@ -51,7 +52,7 @@ function Free() {
     <h2 className='fw-bolder  display-6 m-0'>Results that speak for themselves</h2>
   </div>
   <div className='border col-lg-2 col-4' >
-  <button type="button"  class="btn bg-lightgreen rounded text-white col-12  ">Get started</button>
+  <motion.button type="motion.button"  class="btn bg-lightgreen rounded text-white col-12  ">Get started</motion.button>
                    
   </div>
  </section>
@@ -155,7 +156,7 @@ function Free() {
 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
 
 
-<button type="button"  class="btn bg-lightgreen rounded text-white col-lg-3 m-auto  ">Book a session with us</button>
+<motion.button type="motion.button"  class="btn bg-lightgreen rounded text-white col-lg-3 m-auto  ">Book a session with us</motion.button>
    <div className=' d-none d-lg-block position-absolute start-10 '><img src={smallone} alt="" /> </div>            
    <div className=' d-none d-lg-block position-absolute end-10 '><img src={jane} alt="" /> </div>            
    <div className=' d-none d-lg-block position-absolute top-50 '><img src={smallthree} alt="" /> </div>            

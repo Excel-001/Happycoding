@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import './App.scss';
+import { motion} from 'framer-motion';
 import { useState } from "react";
  function Project() {
     
@@ -41,7 +42,7 @@ import { useState } from "react";
       </div>
      
     <div className=" d-flex justify-content-center">
-      <button className=" col-lg-2 col-4 btn bg-lightgreen rounded text-white" onClick={handleDivide}>Divide</button>  
+      <motion.button className=" col-lg-2 col-4 btn bg-lightgreen rounded text-white" onClick={handleDivide}>Divide</motion.button>  
         </div>  
       <div className="fs-sm-3  fw-bolder text-navyblue d-flex justify-content-center align-items-center">
         Result: {numerator} / {denominator} = <p className="fw-bolder  text-navyblue m-0">{result} </p> 
