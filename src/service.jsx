@@ -8,6 +8,7 @@ import three from './assets/three.svg'
 import four from './assets/four.svg'
 import face from './assets/face.svg'
 import { NavLink } from "react-router-dom";
+import {motion} from 'framer-motion'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import './App.scss'
@@ -20,43 +21,102 @@ function Service() {
                 <p>
                 I can help you in these patricular areas.
                 </p>
-                <h1 className="fw-bolder display-2 col-md-10 ">
+                <motion.h1 
+                 initial= {
+                  {
+                     x: -300 
+                  }
+                  
+                  }
+                  whileInView = {
+                    {
+                       x:0,
+                
+                    transition: {
+                      type: "tween",
+                      duration: .8
+                    }
+                   
+                    }
+                  }
+                className="fw-bolder display-2 col-md-10 ">
                 I help people to discover their true potential
-                </h1>
+                </motion.h1>
                 <p className="col-md-9">
                 I help people to discover their true potential and live a fulfilling life...
 Discover the simple 3 steps that I discovered to hack productivity. It just works and it is begin using backed by science. Wanna transform your life?
                 </p>
             </div>
             <div className="col-lg-5 col-12 ">
-                <img src={sevicebigimg }  className="w-75" alt="" />
+                <motion.img 
+                  initial= {{
+                    x: 300
+                 }
+                    
+                   }
+                    whileInView= {{
+                       x: 0,
+                 
+                     transition: {
+                       type: "spring",
+                       bounce: 0.4,
+                       duration: 2,
+                       delay:0
+                   }
+                   
+                     }
+                   }
+                 src={sevicebigimg }  className="w-75" alt="" />
             </div>
       </div>
       <div className="text-navyblue py-5 container">
-        <h2 className=" text-center  col-lg-5  pb-5 pb-md-0 m-auto fw-bolder  display-6" >I can help you in these particular areas.</h2>
-        <div className="  m-auto d-flex flex-column flex-md-row gap-md-2 flex-wrap gap-4 justify-content-center p-md-5">
-<div className="col-lg-4 col-12 r border p-2">
+        <motion.h2
+         initial= {
+          {
+             x: -300 
+          }
+          
+          }
+          whileInView = {
+            {
+               x:0,
+        
+            transition: {
+              type: "tween",
+              duration: .8
+            }}}
+         className=" text-center  col-lg-5  pb-5 pb-md-0 m-auto fw-bolder  display-6" >I can help you in these particular areas.</motion.h2>
+        <div className=" border  m-auto d-flex flex-column flex-md-row gap-md-2 flex-wrap gap-4 justify-content-center p-md-5">
+<motion.div 
+initial={{
+  scale:1
+}}
+whileHover={{
+  scale:.9,
+  color:'#20AD96',
+}}
+className="col-lg-4 col-12  border p-2">
     <img src={gcs} alt="" />
     <p><b className="fs-5 ">Group Coaching Sessions</b></p>
   <p className=" col-lg-11">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
   </p>
-</div>
-<div className="col-lg-4 r border p-2">
+</motion.div>
+<div className="col-lg-4  border p-2">
     <img src={coaching} alt="" />
     <p><b className="fs-5 ">Group Coaching Sessions</b></p>
   <p className="col-lg-11">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
   </p>
 </div>
-<div className="col-lg-4 r border p-2">
+<div className="col-lg-4  border p-2">
     <img src={frame2} alt="" />
     <p><b className="fs-5 ">Online course</b></p>
   <p className=" col-lg-11">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua minim veniam.
   </p>
 </div>
-<div className="col-lg-4 r border p-2">
+<div className="col-lg-4  border p-2">
     <img src={coaching} alt="" />
     <p><b className="fs-5 ">1:1 Coaching</b></p>
   <p className=" col-lg-11">

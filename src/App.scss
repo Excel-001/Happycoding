@@ -1,85 +1,82 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;700;800;900&display=swap");
 
 @import "../node_modules/bootstrap/scss/_functions";
 @import "../node_modules/bootstrap/scss/_variables";
-.left-25{
-left: -5vw !important;
-top: 10vh;
+.left-25 {
+  left: -5vw !important;
+  top: 10vh;
 }
-.bottom-10{
-bottom: -10vh;
+.bottom-10 {
+  bottom: -10vh;
 }
-.Active{
-border-bottom: solid 2px #20AD96 !important;
+.Active {
+  border-bottom: solid 2px #20ad96 !important;
 }
-.bottom10{
-top: -10vh;
+.bottom10 {
+  top: -10vh;
 }
-img{
-max-width: 100%;
+img {
+  max-width: 100%;
 }
-.O:hover{
+.O:hover {
+  background-color: #faf8f6 !important;
+  flex-grow: 0.2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.p:hover {
+  background-color: rgb(226, 218, 218) !important;
+  flex-grow: 0.2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
 
-background-color:#FAF8F6 !important;
-flex-grow: .2;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+.r:hover {
+  height: 40vh;
+  cursor: pointer;
+  flex-shrink: 1;
 }
-.p:hover{
-
-background-color: rgb(226, 218, 218) !important;
-flex-grow: .2;
-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+.r:hover p b {
+  color: #20ad96;
 }
-
-.r:hover{
-height: 40vh;
-cursor: pointer;
-flex-shrink: 1;
+img {
+  max-width: 100vw;
 }
-.r:hover p b{
-color: #20AD96;
+.start-10 {
+  right: 10vw;
 }
-img{
-max-width: 100vw;
+.end-10 {
+  left: 10vw;
 }
-.start-10{
-right: 10vw;
+.accordion-motion.button:not(.collapsed) {
+  background-color: transparent !important;
+  color: inherit;
 }
-.end-10{
-left: 10vw;
+motion.button.accordion-motion.button:focus {
+  box-shadow: inherit;
 }
-.accordion-motion.button:not(.collapsed){
-background-color: transparent !important;
-color: inherit;
-}
-motion.button.accordion-motion.button:focus{
-box-shadow: inherit;
-
-}
-$colors:(
-  "lightgreen":#20AD96,
-  'navyblue':#333461,
-  'grey':#4A556C,
-  'milk':#FAF8F6,    
-
+$colors: (
+  "lightgreen": #20ad96,
+  "navyblue": #333461,
+  "grey": #4a556c,
+  "milk": #faf8f6,
 );
-.hidden{
-display: none !important;
+.hidden {
+  display: none !important;
 }
 $theme-colors: map-merge($colors, $theme-colors);
-::placeholder{
-  color: #4A556C;
+::placeholder {
+  color: #4a556c;
 }
-.load{
-height: 100vh;
+.load {
+  height: 100vh;
 }
-input{
-outline: none !important;
-border: solid 2px #4A556C;
-border-radius: 3px;
+input {
+  outline: none !important;
+  border: solid 2px #4a556c;
+  border-radius: 3px;
 }
-.sp{
+.sp {
   padding-top: 6rem;
 }
-@import '../node_modules/bootstrap/scss/bootstrap.scss'
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

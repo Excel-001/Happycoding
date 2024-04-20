@@ -165,13 +165,21 @@ function App() {
                     className=" btn-btn-outline-danger col-12 col-lg-6 shadow-none  rounded border-none outline-none"
                     id=""
                   />
-                  <button
+                  <motion.button
+                    initial= {{
+                      x: 50
+                   }
+                      
+                     }
+                      whileInView= {{x: 0, transition: {duration: 1,}}}
+                     whileHover={{ scale: 1.1 }}
+                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                     type="button"
                     onClick={handleClick}
                     className="btn bg-lightgreen rounded text-white col-6 col-md-3  "
                   >
                     Subscribe
-                  </button>
+                  </motion.button>
                 </div>
               </section>
               <section className="d-flex flex-column flex-md-row col-12 p-4 column-gap-4">
