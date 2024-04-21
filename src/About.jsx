@@ -13,44 +13,85 @@ import calender from "./assets/calender.svg";
 import alarm from "./assets/alarm.svg";
 import flower from "./assets/flower.svg";
 import aboutimg from "./assets/aboutbigimg.svg";
+import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 function About() {
   return (
     <>
       <section className="p-4 bg-milk text-navyblue d-flex flex-column flex-lg-row justify-content-between align-items-center">
         <div className="col-lg-5">
-          <p></p>
-          <h1 className="fw-bolder display-2">About me</h1>
+          <motion.h1
+            initial={{ x: -300 }}
+            whileInView={{ x: 0, transition: { type: "tween", duration: 0.8 } }}
+            className="fw-bolder display-2"
+          >
+            About me
+          </motion.h1>
           <p>
             I help people to discover their true potential and live a fulfilling
             life... Discover the simple 3 steps that I discovered to hack
             productivity. It just works and it is begin using backed by science.
             Wanna transform your life?
           </p>
-          <button type="button" class="btn bg-lightgreen rounded text-white ">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            initial={{ y: 250 }}
+            whileInView={{ y: 0, transition: { duration: 1 } }}
+            type="button"
+            class="btn bg-lightgreen rounded text-white "
+          >
             Book a session with us
-          </button>
+          </motion.button>
         </div>
         <div className="col-lg-5">
-          <img src={aboutimg} className="w-100" alt="" />
+          <motion.img
+            initial={{ x: 300 }}
+            whileInView={{
+              x: 0,
+              transition: {
+                type: "spring",
+                bounce: 0.4,
+                duration: 2,
+                delay: 0,
+              },
+            }}
+            src={aboutimg}
+            className="w-100"
+            alt=""
+          />
         </div>
       </section>
       <section className="px-4 text-grey text-center my-5 d-flex flex-column gap-4">
         <p>From startups to the world’s largest companies</p>
-        <div className="d-flex flex-column flex-lg-row col-7 col-lg-12 m-auto gap-3 gap-lg-0 justify-content-between">
+        <Marquee
+          style={{ gap: 0 }}
+          autoFill
+          className="d-flex    flex-row col-7 col-lg-12 m-auto "
+        >
           <img src={layer} alt="" />
           <img src={syp} alt="" />
           <img src={circool} alt="" />
           <img src={catalog} alt="" />
           <img src={qu} alt="" />
-        </div>
+        </Marquee>
       </section>
       <section className="text-navyblue p-4 bg-milk my-4">
         <h2 className="fw-bolder  display-6 col-lg-4">
           Hear out what my clients say about me.
         </h2>
         <div className="d-flex  my-4 flex-column flex-lg-row justify-content-end gap-5 flex-wrap">
-          <div className="bg-white col-lg-3 col-12 col-md-4 p-3 O  m-auto m-md-0 rounded">
+          <motion.div
+            initial={{ scale: 0.7, background: "#B9BBBE" }}
+            whileInView={{
+              scale: 1,
+              background: "#FFCC4D",
+            }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            whileHover={{ scale: 1.1 }}
+            className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded"
+          >
             <p>
               "I gained so much <b>confidence</b> in my ability to connect and
               deepen my relationships with people. "
@@ -66,8 +107,16 @@ function About() {
               <img src={yellowstar} alt="" />
               <img src={yellowstar} alt="" />
             </div>
-          </div>
-          <div className="bg-white col-lg-3 col-12 col-md-4 O p-3 m-auto m-md-0 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.7 }}
+            whileInView={{
+              scale: 1,
+            }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded"
+          >
             <p>
               "I gained so much <b>confidence</b> in my ability to connect and
               deepen my relationships with people. "
@@ -83,8 +132,17 @@ function About() {
               <img src={yellowstar} alt="" />
               <img src={yellowstar} alt="" />
             </div>
-          </div>
-          <div className="bg-white col-lg-3 col-12 col-md-4 O p-3 m-auto m-md-0 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.7, background: "#B9BBBE" }}
+            whileHover={{ scale: 1.1 }}
+            whileInView={{
+              scale: 1,
+              background: "#FFCC4D",
+            }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="bg-white col-lg-3 col-12 col-md-4 p-3 m-auto m-md-0 rounded"
+          >
             <p>
               "I gained so much <b>confidence</b> in my ability to connect and
               deepen my relationships with people. "
@@ -100,7 +158,7 @@ function About() {
               <img src={yellowstar} alt="" />
               <img src={yellowstar} alt="" />
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -115,7 +173,13 @@ function About() {
           veniam.
         </p>
         <div className="d-flex flex-wrap gap-2 justify-content-between col-12 my-4">
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={four} alt="" />
             </div>
@@ -127,21 +191,14 @@ function About() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
-          <div className="col-lg-3  p shadow-sm p-2 rounded">
-            <div>
-              <img src={calender} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={four} alt="" />
             </div>
@@ -153,34 +210,14 @@ function About() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
-            <div>
-              <img src={flower} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
-            <div>
-              <img src={alarm} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={four} alt="" />
             </div>
@@ -192,7 +229,64 @@ function About() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={four} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={four} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.9 }}
+            whileHover={{ scale: 1 }}
+            whileInView={{ scale: 1.1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={four} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
         </div>
       </section>
       <div>
@@ -227,7 +321,7 @@ function About() {
             </h2>
             <div
               id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
+              class="accordion-collapse collapse"
               aria-labelledby="panelsStayOpen-headingOne"
             >
               <div class="accordion-body text-navyblue">

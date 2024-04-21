@@ -14,15 +14,14 @@ import bimg from "./assets/blueimg.svg";
 import catherine from "./assets/Catherine.svg";
 import booknowimg from "./assets/booknow.svg";
 import { NavLink } from "react-router-dom";
-import React from "react";
 import "./App.scss";
+import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 function Home() {
   const [ref, inView] = useInView({ threshold: 0.5 });
-
   return (
     <>
       <div className="bg-milk mb-5 ">
@@ -61,16 +60,8 @@ function Home() {
             <motion.button
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              initial={{
-                y: 250,
-              }}
-              whileInView={{
-                y: 0,
-
-                transition: {
-                  duration: 1,
-                },
-              }}
+              initial={{ y: 250 }}
+              whileInView={{ y: 0, transition: { duration: 1 } }}
               type="button"
               class="btn bg-lightgreen rounded text-white  "
             >
@@ -79,12 +70,9 @@ function Home() {
           </div>
           <picture className="col-lg-6 col-12 m-auot position-relative">
             <motion.img
-              initial={{
-                x: 300,
-              }}
+              initial={{ x: 300 }}
               whileInView={{
                 x: 0,
-
                 transition: {
                   type: "spring",
                   bounce: 0.4,
@@ -104,34 +92,16 @@ function Home() {
         <div className="col-md-9  col-lg-5 col-12  ">
           <img src={waterlines} alt="" />
           <motion.h2
-            initial={{
-              x: -300,
-            }}
-            whileInView={{
-              x: 0,
-
-              transition: {
-                type: "tween",
-                duration: 0.8,
-              },
-            }}
+            initial={{ x: -300 }}
+            whileInView={{ x: 0, transition: { type: "tween", duration: 0.8 } }}
             className="text-navyblue fs-1  fw-bolder"
           >
             I can help you in these particular areas.
           </motion.h2>
         </div>
         <motion.div
-          initial={{
-            x: 300,
-          }}
-          whileInView={{
-            x: 0,
-
-            transition: {
-              type: "tween",
-              duration: 0.8,
-            },
-          }}
+          initial={{ x: 300 }}
+          whileInView={{ x: 0, transition: { type: "tween", duration: 0.8 } }}
           className="text-navyblue col-md-9 col-lg-4 col-12"
         >
           <p>
@@ -427,9 +397,7 @@ function Home() {
             <p>Limited Period Offer. Claim Now.</p>
             <NavLink to="../service">
               <motion.button
-                initial={{
-                  y: 250,
-                }}
+                initial={{ y: 250 }}
                 whileInView={{ y: 0, transition: { duration: 1 } }}
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}

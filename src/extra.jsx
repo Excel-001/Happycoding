@@ -15,6 +15,7 @@ import red from "./assets/red.svg";
 import green from "./assets/green.svg";
 import booknowimg from "./assets/booknow.svg";
 import award from "./assets/award.svg";
+import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 
 function Extra() {
@@ -367,18 +368,37 @@ function Extra() {
       <section className="px-4 py-5">
         <div className="bg-milk ps-4 rounded-4 d-flex flex-column flex-md-row text-navyblue align-items-center ">
           <div>
-            <h2 className="fs-1  fw-bolder col-lg-10  ">
-              Get 15-Minutes Complimentary online session.
-            </h2>
-            <p>Limited Period Offer. Claim Now.</p>
-            <motion.button
-              type="motion.button"
-              class="btn bg-lightgreen rounded text-white col-lg-4 "
+            <motion.h2
+              initial={{
+                x: 300,
+              }}
+              whileInView={{
+                x: 0,
+
+                transition: {
+                  type: "tween",
+                  duration: 0.8,
+                },
+              }}
+              className="fs-1  fw-bolder col-lg-10  "
             >
-              Book now
-            </motion.button>
+              Get 15-Minutes Complimentary online session.
+            </motion.h2>
+            <p>Limited Period Offer. Claim Now.</p>
+            <NavLink to="../service">
+              <motion.button
+                initial={{ y: 250 }}
+                whileInView={{ y: 0, transition: { duration: 1 } }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                type="button"
+                class="btn bg-lightgreen rounded text-white col-lg-4 "
+              >
+                Book now
+              </motion.button>
+            </NavLink>
           </div>
-          <div>
+          <div className="z-3">
             <img
               src={booknowimg}
               className="mt-5 w-100  rounded-end-4  rounded-top-0"
@@ -401,155 +421,142 @@ function Extra() {
           veniam.
         </p>
       </section>
-      <div>
-        <div className="text-navyblue text-center p-4">
-          <h2 className=" display-6  fw-bolder text-navyblue text-center">
-            {" "}
-            Good to know.
+      <div
+        class="accordion text-navyblue  container"
+        id="accordionPanelsStayOpenExample"
+      >
+        <div class="accordion-item accordion-flush border-0">
+          <h2
+            class="accordion-header shadow-0  border-top"
+            id="panelsStayOpen-headingOne"
+          >
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne"
+              aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne"
+            >
+              <b className="text-navyblue">
+                How long does the coaching process take?{" "}
+              </b>
+            </button>
           </h2>
-          <p>Everything you need to know about the my services.</p>
+          <div
+            id="panelsStayOpen-collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingOne"
+          >
+            <div class="accordion-body text-navyblue">
+              Yes, you can try us for free for 30 days. If you want, we’ll
+              provide you with a free, personalized 30-minute onboarding call to
+              get you up and running as soon as possible.
+            </div>
+          </div>
         </div>
-        <div
-          class="accordion text-navyblue  container"
-          id="accordionPanelsStayOpenExample"
-        >
-          <div class="accordion-item accordion-flush border-0">
-            <h2
-              class="accordion-header shadow-0  border-top"
-              id="panelsStayOpen-headingOne"
+        <div class="accordion-item accordion-flush border-0">
+          <h2
+            class="accordion-header shadow-0  border-top"
+            id="panelsStayOpen-headingTwo"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo"
             >
-              <motion.button
-                class="accordion-motion.button"
-                type="motion.button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseOne"
-                aria-expanded="true"
-                aria-controls="panelsStayOpen-collapseOne"
-              >
-                <b className="text-navyblue">
-                  How long does the coaching process take?{" "}
-                </b>
-              </motion.button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseOne"
-              class="accordion-collapse collapse show"
-              aria-labelledby="panelsStayOpen-headingOne"
-            >
-              <div class="accordion-body text-navyblue">
-                Yes, you can try us for free for 30 days. If you want, we’ll
-                provide you with a free, personalized 30-minute onboarding call
-                to get you up and running as soon as possible.
-              </div>
+              <b className="text-navyblue">
+                What if I wanted to end my coaching engagement?{" "}
+              </b>
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo"
+          >
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
             </div>
           </div>
-          <div class="accordion-item accordion-flush border-0">
-            <h2
-              class="accordion-header shadow-0  border-top"
-              id="panelsStayOpen-headingTwo"
+        </div>
+        <div class="accordion-item accordion-flush border-0">
+          <h2
+            class="accordion-header shadow-0  border-top"
+            id="panelsStayOpen-headingThree"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree"
             >
-              <motion.button
-                class="accordion-motion.button collapsed"
-                type="motion.button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseTwo"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseTwo"
-              >
-                <b className="text-navyblue">
-                  What if I wanted to end my coaching engagement?{" "}
-                </b>
-              </motion.button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseTwo"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingTwo"
-            >
-              <div class="accordion-body">
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
-              </div>
+              <b className="text-navyblue">Can I change through coaching? </b>
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
             </div>
           </div>
-          <div class="accordion-item accordion-flush border-0">
-            <h2
-              class="accordion-header shadow-0  border-top"
-              id="panelsStayOpen-headingThree"
+        </div>
+        <div class="accordion-item accordion-flush border-0">
+          <h2
+            class="accordion-header shadow-0  border-top"
+            id="panelsStayOpen-headingFour"
+          >
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseFour"
+              aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseFour"
             >
-              <motion.button
-                class="accordion-motion.button collapsed"
-                type="motion.button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseThree"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseThree"
-              >
-                <b className="text-navyblue">Can I change through coaching? </b>
-              </motion.button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseThree"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingThree"
-            >
-              <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item accordion-flush border-0">
-            <h2
-              class="accordion-header shadow-0  border-top"
-              id="panelsStayOpen-headingFour"
-            >
-              <motion.button
-                class="accordion-motion.button collapsed"
-                type="motion.button"
-                data-bs-toggle="collapse"
-                data-bs-target="#panelsStayOpen-collapseFour"
-                aria-expanded="false"
-                aria-controls="panelsStayOpen-collapseFour"
-              >
-                <b className="text-navyblue">How often do we meet? </b>
-              </motion.button>
-            </h2>
-            <div
-              id="panelsStayOpen-collapseFour"
-              class="accordion-collapse collapse"
-              aria-labelledby="panelsStayOpen-headingFour"
-            >
-              <div class="accordion-body">
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classes that we use to style each element. These
-                classes control the overall appearance, as well as the showing
-                and hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
-              </div>
+              <b className="text-navyblue">How often do we meet? </b>
+            </button>
+          </h2>
+          <div
+            id="panelsStayOpen-collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingFour"
+          >
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is
+              hidden by default, until the collapse plugin adds the appropriate
+              classes that we use to style each element. These classes control
+              the overall appearance, as well as the showing and hiding via CSS
+              transitions. You can modify any of this with custom CSS or
+              overriding our default variables. It's also worth noting that just
+              about any HTML can go within the <code>.accordion-body</code>,
+              though the transition does limit overflow.
             </div>
           </div>
         </div>
       </div>
-
       <section className="my-5 mx-4 py-5 px-2 text-navyblue d-flex flex-column align-items-center  rounded-4 bg-milk">
         <h4 className="text-center">Still have questions?</h4>
         <p className="text-center">
