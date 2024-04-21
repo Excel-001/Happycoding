@@ -18,27 +18,15 @@
 img {
   max-width: 100%;
 }
-.O:hover {
-  background-color: #faf8f6 !important;
-  flex-grow: 0.2;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
-.p:hover {
-  background-color: rgb(226, 218, 218) !important;
-  flex-grow: 0.2;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-}
+
+
 
 .r:hover {
   height: 40vh;
   cursor: pointer;
   flex-shrink: 1;
 }
-.r:hover p b {
-  color: #20ad96;
-}
+
 img {
   max-width: 100vw;
 }

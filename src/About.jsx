@@ -15,6 +15,7 @@ import flower from "./assets/flower.svg";
 import aboutimg from "./assets/aboutbigimg.svg";
 import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 function About() {
   return (
@@ -34,16 +35,19 @@ function About() {
             productivity. It just works and it is begin using backed by science.
             Wanna transform your life?
           </p>
-          <motion.button
+          <NavLink to='/free'>
+<motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            initial={{ y: 250 }}
+            initial={{ y: 100 }}
             whileInView={{ y: 0, transition: { duration: 1 } }}
             type="button"
             class="btn bg-lightgreen rounded text-white "
           >
             Book a session with us
           </motion.button>
+          </NavLink>
+          
         </div>
         <div className="col-lg-5">
           <motion.img
@@ -162,7 +166,7 @@ function About() {
         </div>
       </section>
 
-      <section className="text-center text-navyblue p-4">
+      <section className="container text-center text-navyblue gap-5 p-4">
         <p className="m-0">How does it work?</p>
         <h2 className="fw-bolder  display-6">
           Are you ready to transform your life?
@@ -172,12 +176,12 @@ function About() {
           eiusmod tempor incididunt ut labore et dolore magna aliqua minim
           veniam.
         </p>
-        <div className="d-flex flex-wrap gap-2 justify-content-between col-12 my-4">
+        <div className="d-flex flex-wrap gap-2 gap-lg-4 justify-content-between col-12 my-4">
           <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7 } }}
             className="col-lg-3  shadow-sm p-2 rounded"
           >
             <div>
@@ -193,10 +197,48 @@ function About() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={calender} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={alarm} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
             className="col-lg-3  shadow-sm p-2 rounded"
           >
             <div>
@@ -212,14 +254,14 @@ function About() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
             className="col-lg-3  shadow-sm p-2 rounded"
           >
             <div>
-              <img src={four} alt="" />
+              <img src={flower} alt="" />
             </div>
             <p>
               <b>Ready to start? Let’s talk!</b>
@@ -231,10 +273,10 @@ function About() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 , duration:.7} }}
             className="col-lg-3  shadow-sm p-2 rounded"
           >
             <div>
@@ -249,44 +291,7 @@ function About() {
               adipiscing elit.
             </p>
           </motion.div>
-          <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
-            className="col-lg-3  shadow-sm p-2 rounded"
-          >
-            <div>
-              <img src={four} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ scale: 0.9 }}
-            whileHover={{ scale: 1 }}
-            whileInView={{ scale: 1.1 }}
-            transition={{ scale: { type: "spring", stiffness: 500 } }}
-            className="col-lg-3  shadow-sm p-2 rounded"
-          >
-            <div>
-              <img src={four} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </motion.div>
+        
         </div>
       </section>
       <div>
@@ -445,12 +450,19 @@ function About() {
           team.
         </p>
         <div>
-          <button
+          <NavLink to='/free'>
+             <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              initial={{ y: 50 }}
+              whileInView={{ y: 0, transition: { duration: 1 } }}
             type="button"
             class="btn bg-lightgreen rounded text-white m-auto "
           >
             Get in touch
-          </button>
+          </motion.button>
+          </NavLink>
+         
         </div>
       </section>
     </>

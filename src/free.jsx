@@ -63,6 +63,10 @@ function Free() {
             We care about your data in our <a href="">privacy policy</a>
           </p>
           <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0, transition: { duration: 1 } }}
             type="submit"
             onClick={handleClick}
             class="btn bg-lightgreen rounded text-white col-lg-4 col-5 "
@@ -71,7 +75,18 @@ function Free() {
           </motion.button>
         </div>
         <div className=" col-lg-6 col-12 bg-milk d-flex justify-content-center align-items-center p-4 ">
-          <img src={bimg} alt="" />
+          <motion.img
+           initial={{ x: 300 }}
+           whileInView={{
+             x: 0,
+             transition: {
+               type: "spring",
+               bounce: 0.4,
+               duration: 2,
+               delay: 0,
+             },
+           }}
+           src={bimg} alt="" />
         </div>
       </section>
 
@@ -82,8 +97,12 @@ function Free() {
             Results that speak for themselves
           </h2>
         </div>
-        <div className="border col-lg-2 col-4">
+        <div className=" col-lg-2 col-4">
           <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0, transition: { duration: 1 } }}
             type="motion.button"
             class="btn bg-lightgreen rounded text-white col-12  "
           >
@@ -217,7 +236,7 @@ function Free() {
         </div>
       </section>
 
-      <div className=" border d-flex justify-content-center col-lg-4 col-11 m-auto  position-relative bottom10">
+      <div className=" d-flex justify-content-center col-lg-4 col-11 m-auto  position-relative bottom10">
         <video
           src={vid}
           muted
@@ -243,25 +262,61 @@ function Free() {
         </p>
 
         <motion.button
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          initial={{ y: 50 }}
+          whileInView={{ y: 0, transition: { duration: 1 } }}
           type="motion.button"
           class="btn bg-lightgreen rounded text-white col-lg-3 m-auto  "
         >
           Book a session with us
         </motion.button>
         <div className=" d-none d-lg-block position-absolute start-10 ">
-          <img src={smallone} alt="" />{" "}
+          <motion.img
+            whileInView={{
+              scale: [0.5, 0.9, 0.9, 0.4, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+            src={smallone}
+            alt=""
+          />{" "}
         </div>
         <div className=" d-none d-lg-block position-absolute end-10 ">
-          <img src={jane} alt="" />{" "}
+          <motion.img
+            whileInView={{
+              scale: [0.5, 0.9, 0.9, 0.4, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+           src={jane} alt="" />{" "}
         </div>
         <div className=" d-none d-lg-block position-absolute top-50 ">
-          <img src={smallthree} alt="" />{" "}
+          <motion.img 
+            whileInView={{
+              scale: [0.5, 0.9, 0.9, 0.4, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+          src={smallthree} alt="" />{" "}
         </div>
         <div className=" d-none d-lg-block position-absolute top-50 end-0">
-          <img src={smalltwo} alt="" />{" "}
+          <motion.img
+            whileInView={{
+              scale: [0.5, 0.9, 0.9, 0.4, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+           src={smalltwo} alt="" />{" "}
         </div>
         <div className=" d-none d-lg-flex position-relative    justify-content-end container ">
-          <img src={smallfour} alt="" />{" "}
+          <motion.img
+            whileInView={{
+              scale: [0.5, 0.9, 0.9, 0.4, 1],
+              rotate: [0, 0, 270, 270, 0],
+              borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+            }}
+           src={smallfour} alt="" />{" "}
         </div>
 
         <div>

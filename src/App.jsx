@@ -192,9 +192,9 @@ function App() {
                   <ul className="list-unstyled text-grey fs-6">
                     <li><NavLink to='/home' className='text-decoration-none text-grey' >Home</NavLink></li>
                     <li> <NavLink to='/service' className='text-decoration-none text-grey'> Services</NavLink></li>
-                    <li><NavLink className='text-decoration-none text-grey'> About us</NavLink></li>
-                    <li><NavLink className='text-decoration-none text-grey'>Extra Sales/Landingpage</NavLink> </li>
-                    <li><NavLink className='text-decoration-none text-grey'> Free guide</NavLink></li>
+                    <li><NavLink to='/about' className='text-decoration-none text-grey'> About us</NavLink></li>
+                    <li><NavLink to='/extra' className='text-decoration-none text-grey'>Extra Sales/Landingpage</NavLink> </li>
+                    <li><NavLink to='/extra' className='text-decoration-none text-grey'> Free guide</NavLink></li>
                   </ul>
                 </div>
                 <div className="p-0 col-4">

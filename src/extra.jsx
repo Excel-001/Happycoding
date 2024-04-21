@@ -32,9 +32,21 @@ function Extra() {
             <p className="text-navyblue">
               Proven strategies backed by science for success.
             </p>
-            <h1 className="text-navyblue fw-bolder  display-2">
+            <motion.h1
+              initial={{ x: -500 }}
+              whileInView={{
+                x: 0,
+
+                transition: {
+                  type: "tween",
+                  delay: 0.5,
+                  duration: 0.8,
+                },
+              }}
+              className="text-navyblue fw-bolder  display-2"
+            >
               Self Esteem Therapy
-            </h1>
+            </motion.h1>
             <p className="text-navyblue">
               I help people to discover their true potential and live a
               fulfilling life... Discover the simple 3 steps that I discovered
@@ -42,14 +54,26 @@ function Extra() {
               by science. Wanna transform your life?
             </p>
             <motion.button
-              type="motion.button"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+              initial={{ y: 200 }}
+              whileInView={{ y: 0, transition: { duration: 1 } }}
+              type="button"
               class="btn bg-lightgreen rounded text-white "
             >
               Book a session with us
             </motion.button>
           </div>
           <picture className="col-lg-6 col-12 m-auot  d-flex  justify-content-center position-relative">
-            <img
+            <motion.img
+              initial={{ x: 650 }}
+              whileInView={{
+                x: 0,
+                transition: {
+                  type: "tween",
+                  duration: 0.8,
+                },
+              }}
               src={extra}
               className=" position-relative bottom-10 w-75 col-12 "
               alt=""
@@ -68,7 +92,13 @@ function Extra() {
           veniam.
         </p>
         <div className="d-flex flex-wrap gap-2 justify-content-between col-12 my-4">
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+        <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={four} alt="" />
             </div>
@@ -80,8 +110,14 @@ function Extra() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
-          <div className="col-lg-3  p shadow-sm p-2 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={calender} alt="" />
             </div>
@@ -93,34 +129,14 @@ function Extra() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
-            <div>
-              <img src={four} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
-            <div>
-              <img src={flower} alt="" />
-            </div>
-            <p>
-              <b>Ready to start? Let’s talk!</b>
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
-              adipiscing elit.
-            </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7 } }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={alarm} alt="" />
             </div>
@@ -132,8 +148,14 @@ function Extra() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
-          <div className="col-lg-3 p shadow-sm p-2 rounded">
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
             <div>
               <img src={four} alt="" />
             </div>
@@ -145,7 +167,45 @@ function Extra() {
               eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-          </div>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 ,duration:.7} }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={flower} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ scale: 0.8 }}
+            whileHover={{ scale: .9 }}
+            whileInView={{ scale: 1 }}
+            transition={{ scale: { type: "spring", stiffness: 500 , duration:.7} }}
+            className="col-lg-3  shadow-sm p-2 rounded"
+          >
+            <div>
+              <img src={four} alt="" />
+            </div>
+            <p>
+              <b>Ready to start? Let’s talk!</b>
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -198,9 +258,19 @@ function Extra() {
       <section className="text-navyblue d-flex flex-column flex-md-row justify-content-between align-items-center p-4">
         <div>
           <p className="m-0">Testimonials</p>
-          <h2 className="fw-bolder  display-6 m-0">
+          <motion.h2 
+            initial={{ x: -500 }}
+            whileInView={{
+              x: 0,
+
+              transition: {
+                type: "tween",
+                duration: 0.8,
+              },
+            }}
+          className="fw-bolder  display-6 m-0">
             Results that speak for themselves
-          </h2>
+          </motion.h2>
         </div>
         <div>
           <motion.button
@@ -334,7 +404,18 @@ function Extra() {
               </div>
             </div>
           </div>
-          <div className=" p-5 bg-white">
+          <motion.div
+            initial={{ x: 600 }}
+            whileInView={{
+              x: 0,
+
+              transition: {
+                type: "tween",
+         
+                duration: 0.8,
+              },
+            }}
+           className=" p-5 bg-white">
             <h5 className="mb-4">This is for you if...</h5>
             <div className="  d-flex flex-column gap-4">
               <div className="d-flex gap-2 col-11">
@@ -362,7 +443,7 @@ function Extra() {
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section className="px-4 py-5">
@@ -410,7 +491,10 @@ function Extra() {
 
       <section className="text-center my-5 px-4 ">
         <dir>
-          <img src={award} alt="" />
+          <motion.img
+          initial={{opacity:0}} 
+          whileInView={{opacity:1, transition:{duration:2,}}}
+          src={award} alt="" />
         </dir>
         <h2 className=" display-6  fw-bolder text-navyblue text-center">
           Guarantee
@@ -565,6 +649,10 @@ function Extra() {
         </p>
         <div>
           <motion.button
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0, transition: { duration: 1 } }}
             type="motion.button"
             class="btn bg-lightgreen rounded text-white m-auto "
           >

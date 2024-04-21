@@ -14,7 +14,7 @@ function Project() {
     } else if (numerator % denominator === 0) {
       setResult(numerator / denominator);
     } else {
-      alert("hey the munber you are putting must lead you a remender of 0");
+      alert("hey the number you are putting must lead you a remender of 0");
     }
   };
 

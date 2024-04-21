@@ -20,6 +20,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+
 function Home() {
   const [ref, inView] = useInView({ threshold: 0.5 });
   return (
@@ -36,9 +37,7 @@ function Home() {
               Proven strategies backed by science for success.
             </p>
             <motion.h1
-              initial={{
-                x: -300,
-              }}
+              initial={{x: -300,}}              
               whileInView={{
                 x: 0,
 
@@ -57,7 +56,8 @@ function Home() {
               to hack productivity. It just works and it is begin using backed
               by science. Wanna transform your life?
             </p>
-            <motion.button
+            <NavLink to='/free'>
+                <motion.button
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
               initial={{ y: 250 }}
@@ -67,6 +67,8 @@ function Home() {
             >
               Book a session with us
             </motion.button>
+            </NavLink>
+          
           </div>
           <picture className="col-lg-6 col-12 m-auot position-relative">
             <motion.img
@@ -318,6 +320,7 @@ function Home() {
           </motion.div>
         </div>
         <div className="d-flex ">
+          
           <motion.button
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
@@ -358,7 +361,8 @@ function Home() {
             quae ab illo inventore veritatis et quasi architecto beatae vitae
             dicta sunt explicabo.
           </p>
-          <motion.button
+          <NavLink to='/free'>
+             <motion.button
             initial={{
               y: 250,
             }}
@@ -370,6 +374,8 @@ function Home() {
           >
             Book a session with us
           </motion.button>
+          </NavLink>
+         
         </div>
         <div className="col-md-5">
           <img src={bimg} alt="" className="w-100" />
